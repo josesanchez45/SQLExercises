@@ -12,6 +12,7 @@ where c.Name = 'Computers';
  inner join reviews as r
  on p.ProductID = r.ProductID
  where r.Rating = '5';
+ 
 /* joins: find the employee with the most total quantity sold.  use the sum() function and group by */
 select e.FirstName , e.LastName, SUM(s.Quantity) AS Total
  From Sales AS s
@@ -32,7 +33,7 @@ where c.Name = "Appliances" or c.Name = "Games";
  from Products as p
  INNER JOIN Sales as s
  on p.ProductID = s.ProductID
- Where p.Name like '%Eagles:%';
+ Where p.Name like '%Eagles: Hotel California%';
 
 /* joins: find Product name, reviewer name, rating, and comment on the Visio TV. (only return for the lowest rating!) */
 SELECT P.Name, R.Reviewer, r. Rating, r.Comment
